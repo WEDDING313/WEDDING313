@@ -292,7 +292,7 @@ section.py-20{
   width: 420px;
   display: block;
   opacity: 0;
-  transform: scale(10.5) rotate(0deg);
+  transform: scale(1.2) rotate(0deg);
   transform-origin: bottom center;
   transition:
     opacity 1.5s ease,
@@ -305,6 +305,22 @@ section.py-20{
   transform: scale(1) rotate(0deg);
 }
 
+/* ================= tambahan ================= */
+  .section-ornament{
+  max-width: 100vw;
+  overflow: hidden;
+}
+  img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+  @media (max-width: 768px){
+  .quran-section{
+    background-size: cover;
+  }
+}
 /* ================= POSISI ================= */
 
 .ornament-left-bottom{
@@ -1362,6 +1378,24 @@ section.py-20{
   }
 }
 
+  /* ==== ANTI OVERFLOW MOBILE LOCK ==== */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+/* semua section utama */
+section,
+.bg-section,
+.hero-slideshow,
+.invitation-text-section,
+.quran-section {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 /* ================= FOOTER CINEMATIC ================= */
 .cinematic-footer{
