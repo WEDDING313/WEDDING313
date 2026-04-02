@@ -173,14 +173,82 @@ html, body{
     right: -40px;
   }
 }
-  .music-btn,
-.music-toggle,
-.audio-btn,
-#music{
-  display: none !important;
+/* ================= FIX OVERFLOW HP ================= */
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+  position: relative;
 }
-  *{
-  outline: 1px solid red;
+
+/* Pastikan semua container tidak overflow */
+section, div, main, footer, .bg-section {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+/* Perbaiki hero slideshow di HP */
+.hero-slideshow {
+  background-attachment: scroll !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* Perbaiki gambar ornament */
+.section-ornament img {
+  max-width: 40vw !important;
+  width: auto !important;
+}
+
+@media (max-width: 768px) {
+  .section-ornament.ornament-left-bottom {
+    left: -20px !important;
+    bottom: -10px !important;
+  }
+  
+  .section-ornament.ornament-right-top {
+    right: -20px !important;
+    top: -10px !important;
+  }
+  
+  .section-ornament img {
+    width: 180px !important;
+    opacity: 0.7;
+  }
+}
+
+/* Perbaiki gallery grid di HP */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  
+  .gallery-item {
+    height: 200px !important;
+  }
+}
+
+/* Perbaiki gift card di HP */
+@media (max-width: 480px) {
+  .gift-card {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .bank-number {
+    font-size: 1rem !important;
+  }
+}
+
+/* Perbaiki timer di HP */
+@media (max-width: 768px) {
+  #timer-cover div, #timer-main div {
+    padding: 8px 12px !important;
+    min-width: 50px !important;
+    font-size: 14px !important;
+  }
 }
 /* ================= HERO CINEMATIC ================= */
 .hero-slideshow{
