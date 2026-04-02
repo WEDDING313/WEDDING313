@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-<!DOCTYPE html>
-<html lang="id">
 <head>
 <meta charset="UTF-8">
 
@@ -156,8 +154,14 @@ section.py-20{
 }
 
 /* ================= TAMBAHAN ================= */
-html, body {
-  overflow-x: hidden;
+html, body{
+  width: 100%;
+  overflow-x: hidden !important;
+}
+  img, iframe, video{
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 /* ================= HERO CINEMATIC ================= */
 .hero-slideshow{
@@ -276,14 +280,21 @@ html, body {
 /* ================= ORNAMEN FLOWER ================= */
 .section-ornament{
   position: absolute;
+  inset: auto;
+  max-width: 100vw;
+  overflow: hidden;
   pointer-events: none;
-  opacity: 0;
-  transition:
-    opacity 1.3s ease,
-    transform 1.6s cubic-bezier(.22,1,.36,1);
   z-index: 1;
 }
+@media (max-width: 768px){
+  .ornament-left-bottom{
+    transform: translate(-10px, 20px);
+  }
 
+  .ornament-right-top{
+    transform: translate(10px, -20px);
+  }
+}
 /* muncul saat scroll */
 .section-ornament.show{
   opacity: 1;
@@ -323,10 +334,7 @@ html, body {
   transform: translate(0, -20px);
 }
 
-.section-ornament{
-  max-width: 100%;
-  overflow: hidden;
-}
+
 
 .section-ornament img{
   max-width: 100%;
